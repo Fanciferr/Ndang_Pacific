@@ -1,0 +1,100 @@
+/* Pacific Trails Resort CSS */
+
+/* General page setup */
+body {
+    background-color: #f4f4f4;
+    color: #333333;
+    font-family: Arial, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper */
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    min-width: 960px;
+    max-width: 2048px;
+}
+
+/* Header */
+header {
+    background-image: url("images/sunset.jpg");
+    background-size: cover;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5em;
+    line-height: 1.2;
+}
+
+/* Navigation */
+nav {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+nav b a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #333;
+}
+
+nav b a:hover {
+    color: #660099;
+}
+
+/* Hero images (divs) */
+#homehero,
+#yurthero,
+#trailhero {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+#homehero {
+    background-image: url("images/fishingboat.jpg");
+}
+#yurthero {
+    background-image: url("images/fishingboat.jpg");
+}
+#trailhero {
+    background-image: url("images/fishingboat.jpg");
+}
+
+/* Main content */
+main {
+    display: block;
+    padding: 0 20px 20px 20px;
+}
+
+.special {
+    font-weight: bold;
+    color: #660099;
+}
+
+/* Footer */
+footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #cccccc;
+}
+
+/* Images */
+img {
+    padding: 5px;
+}
