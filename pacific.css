@@ -18,6 +18,8 @@ body {
     border: 1px solid #cccccc;
     min-height: 100vh;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -48,6 +50,7 @@ nav b a {
 main {
     padding-bottom: 20px;
     overflow: hidden; /* This will contain any floating elements */
+    flex: 1; /* This will push footer to bottom */
 }
 
 /* Footer */
@@ -56,6 +59,7 @@ footer {
     text-align: center;
     padding: 10px;
     clear: both; /* This ensures footer stays below any floating content */
+    margin-top: auto; /* This pushes footer to bottom with flexbox */
 }
 
 /* Remove the special class that was causing purple text */
@@ -87,4 +91,14 @@ a.thumbnail-link {
     display: block;
     margin: 20px auto;
     width: fit-content;
+}
+
+/* Page image styling for fishingboat.jpg */
+.page-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
