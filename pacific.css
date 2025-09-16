@@ -1,39 +1,35 @@
 /* Pacific Trails Resort CSS */
 
-/* General page setup */
+/* Wrapper */
 body {
-    background-color: #f4f4f4;
-    color: #333333;
-    font-family: Arial, Verdana, sans-serif;
+    background-color: #f4f4f4;   /* light gray background */
+    color: #333333;             /* dark gray text */
+    font-family: Arial, Verdana, sans-serif; /* default font */
     margin: 0;
     padding: 0;
 }
 
-/* Wrapper */
+/* Main page container */
 #wrapper {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto;   /* center wrapper */
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #cccccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    min-width: 960px;
-    max-width: 2048px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* Header */
 header {
-    background-image: url("images/sunset.jpg");
-    background-size: cover;
+    background-color: #e0e0e0;
     text-align: center;
-    padding: 20px 0;
-    color: white;
+    padding: 10px;
 }
 
 header h1 {
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Brush Script MT', cursive; /* special font */
     font-size: 2.5em;
-    line-height: 1.2;
 }
 
 /* Navigation */
@@ -41,49 +37,17 @@ nav {
     background-color: #ddd;
     padding: 10px;
     text-align: center;
-    font-size: 1.1em;
 }
 
 nav b a {
     text-decoration: none;
     margin: 0 15px;
-    color: #333;
 }
 
-nav b a:hover {
-    color: #660099;
-}
-
-/* Hero images (divs) */
-#homehero,
-#yurthero,
-#trailhero {
-    height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 20px;
-}
-
-#homehero {
-    background-image: url("images/fishingboat.jpg");
-}
-#yurthero {
-    background-image: url("images/fishingboat.jpg");
-}
-#trailhero {
-    background-image: url("images/fishingboat.jpg");
-}
-
-/* Main content */
+/* Main content area */
 main {
-    display: block;
-    padding: 0 20px 20px 20px;
-}
-
-.special {
-    font-weight: bold;
-    color: #660099;
+    padding-bottom: 20px;
+    overflow: hidden; /* This will contain any floating elements */
 }
 
 /* Footer */
@@ -91,10 +55,36 @@ footer {
     background-color: #e0e0e0;
     text-align: center;
     padding: 10px;
-    border-top: 1px solid #cccccc;
+    clear: both; /* This ensures footer stays below any floating content */
 }
 
-/* Images */
-img {
-    padding: 5px;
+/* Remove the special class that was causing purple text */
+/* .special {
+    font-weight: bold;
+    color: #660099;   
+} */
+
+/* Thumbnail styling - Fixed positioning and functionality */
+.thumbnail {
+    display: block;
+    margin: 20px auto;  /* centers image */
+    max-width: 200px;   /* Set a specific max width instead of percentage */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom on hover to indicate it's clickable */
+    border-color: #999;
+}
+
+/* Ensure the thumbnail link doesn't inherit any unwanted styles */
+a.thumbnail-link {
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
 }
